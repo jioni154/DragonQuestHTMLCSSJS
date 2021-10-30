@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,400&display=swap");
+body,
+html {
+  height: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background-image: url("dq.jpg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  z-index: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+footer{
+    position: static;
+    bottom: 0;
+}
+.bottom{
+    background-color: black;
+    overflow: hidden;
+    margin: 0 5% 0 5%;
+    border: 5px solid white;
+    border-bottom:none;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+.bottom a{
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+}
+
+.twitter{
+    color: rgb(29, 155, 240);
+}
+
+.topnav {
+  background-color: black;
+  overflow: hidden;
+  margin: 0px;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.seleccionado {
+  background-color: rgb(216, 49, 49);
+  font-weight: bold;
+}
+
+a:link {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+
+div a:hover {
+  background-color: rgb(216, 49, 49);
+  opacity: 0.4;
+}
+
+.Titulo {
+  position: relative;
+  width: auto;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin: 5%;
+}
+
+.Fondo1 {
+  background-color: black;
+  color: white;
+  width: auto;
+  border: 5px solid white;
+  padding: 20px 5%;
+  border-radius: 10px;
+}
+#Historia.Fondo1 {
+    margin-top: 0;
+  }
+.overflowAuto{
+    overflow: auto;
+}
+
+.flexContenedor{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-items: center;
+}
+
+.historia{
+    flex-grow: 1;
+    width: 70%;
+    padding: 0 4%;
+}
+
+.historia h1{
+    text-align: center;
+}
+
+.slimeGame{
+    flex-grow: 3;
+    width: 30%;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.imgHistoria{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.slime{
+        
+        transition: transform 5s linear;
+}
+
+.slime:active{
+    transform: translate(20000px,0);
+}
+
+button{
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+}
+button:hover{
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+
+#Inicio{
+    display: grid;
+    grid-template-areas:
+      "header"
+      "titulo"
+      "Intro"
+      "Form"
+      "footer";
+    grid-template-rows: 48px 1fr 1fr 2fr auto;
+    grid-template-columns: 1fr;
+    grid-gap: 0vh 0px;
+}
+
+form{
+    display: grid;
+    grid-template-areas:
+      "nombre apellido edad" 
+      "dni email email"
+      "experiencia experiencia botones"
+      ;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
+    height: 100%;
+    row-gap: 3vw;
+
+}
+ 
+
+#Intro,#Form{
+    margin: 0 3%;
+}
+
+
+
+
+
+#historiaDeDQ {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "titulo"
+    "Historia"
+    "Historia"
+    "footer";
+  grid-template-rows: 48px repeat(3, 1fr);
+  grid-template-columns: 1fr ;
+  grid-gap: 2vh 0px;
+}
+
+#listaJuegos {
+    display:grid;
+    grid-template-areas:
+      "header header header"
+      "titulo titulo titulo"
+      "dq1i dq1S dq1T"
+      "dq2i dq2S dq2T"
+      "dq3i dq3S dq3T"
+      "dq4i dq4S dq4T"
+      "dq5i dq5S dq5T"
+      "dq6i dq6S dq6T"
+      "dq7i dq7S dq7T"
+      "dq8i dq8S dq8T"
+      "dq9i dq9S dq9T"
+      "dq10i dq10S dq10T"
+      "dq11i dq11S dq11T"
+      "footer footer footer";
+    grid-template-rows: 48px repeat(13, 1fr);
+    grid-template-columns: 20% 1fr 25%;
+    grid-gap: 2vh 0;
+  }
+
+
+
+
+img {
+  object-fit: scale-down;
+  height: 100%;
+  width: 100%;
+  max-height: 225px;
+}
+
+.item {
+  padding: 10px;
+  background: black;
+  border-top: 5px solid white;
+  text-align: justify;
+  border-bottom: 5px solid white;
+  color: white;
+  position: relative;
+}
+
+.izquierda {
+  margin-left: 5%;
+  border-left: 5px solid white;
+  border-radius: 10px 0 0 10px;
+}
+
+.derecha {
+  margin-right: 5%;
+  border-right: 5px solid white;
+  border-radius: 0 10px 10px 0;
+}
+
+#header {
+  grid-area: header;
+}
+
+#titulo {
+  grid-area: titulo;
+}
+
+#Historia{
+    grid-area: Historia;
+    margin: 3%;
+    height: max-content;
+}
+
+#Animacion{
+    grid-area:Animacion;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+
+iframe {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#Intro.Fondo1{
+    text-align: center;
+    border-bottom: 0px;
+    border-bottom-Right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-top: 0px;
+    padding: 0px 3%;
+}
+
+#Form.Fondo1{
+    text-align: center;
+    border-top: 0px;
+    border-top-Right-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-top: 0px;
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  #listaJuegos {
+    grid-template-areas:
+      "header header"
+      "titulo titulo"
+      "dq1i dq1T"
+      "dq1S dq1S"
+      "dq2i dq2T"
+      "dq2S dq2S"
+      "dq3i dq3T"
+      "dq3S dq3S"
+      "dq4i dq4T"
+      "dq4S dq4S"
+      "dq5i dq5T"
+      "dq5S dq5S"
+      "dq6i dq6T"
+      "dq6S dq6S"
+      "dq7i dq7T"
+      "dq7S dq7S"
+      "dq8i dq8T"
+      "dq8S dq8S"
+      "dq9i dq9T"
+      "dq9S dq9S"
+      "dq10i dq10T"
+      "dq10S dq10S"
+      "dq11S dq11S"
+      "footer footer";
+    grid-template-rows: 48px repeat(24, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 0;
+  }
+
+  .Titulo {
+    margin: 5%;
+  }
+
+  .derecha {
+    border-bottom: none;
+    border-radius: 0 10px 0 0;
+    width: auto;
+    margin-right: 20px;
+  }
+
+  .centro {
+    border-top: none;
+    border-right: 5px solid white;
+    border-left: 5px solid white;
+    border-bottom-left-radius: 25px 25px;
+    border-bottom-right-radius: 25px 25px;
+    margin: 0 20px 20px 20px;
+    width: auto;
+  }
+
+  .izquierda {
+    border-bottom: none;
+    border-radius: 10px 0 0 0;
+    margin-left: 20px;
+  }
+  .item {
+    text-align: center;
+  }
+
+  div a:active {
+    background-color: rgb(216, 49, 49);
+    opacity: 0.4;
+  }
+
+  form{
+    display: grid;
+    grid-template-areas:
+      "nombre apellido" 
+      "dni edad"
+      "email experiencia"
+      "botones botones"
+      ;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2,1fr);
+    height: 100%;
+    row-gap: 3vw;
+
+}
+
+
+
+
+}
+
+@media screen and (max-width: 767px) {
+  #listaJuegos {
+    grid-template-areas:
+      "header"
+      "titulo"
+      "dq1i"
+      "dq1S"
+      "dq1T"
+      "dq2i"
+      "dq2S"
+      "dq2T"
+      "dq3i"
+      "dq3S"
+      "dq3T"
+      "dq4i"
+      "dq4S"
+      "dq4T"
+      "dq5i"
+      "dq5S"
+      "dq5T"
+      "dq6i"
+      "dq6S"
+      "dq6T"
+      "dq7i"
+      "dq7S"
+      "dq7T"
+      "dq8i"
+      "dq8S"
+      "dq8T"
+      "dq9i"
+      "dq9S"
+      "dq9T"
+      "dq10i"
+      "dq10S"
+      "dq10T"
+      "dq11i"
+      "dq11S"
+      "dq11T"
+      "footer";
+    grid-template-rows: 48px repeat(35, 1fr);
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  .izquierda{
+      border-bottom: none;
+      border-right: 5px solid white;
+      border-top-left-radius: 25px 25px;
+      border-top-right-radius: 25px 25px;
+      border-bottom-left-radius: 0;
+      margin: 0 5% 0 5%;
+  }
+  .centro{
+      border-top: none;
+      border-bottom: none;
+      border-left: 5px solid white;
+      border-right: 5px solid white;
+      margin: 0 5% 0 5%;
+  }
+  .derecha{
+    border-top: none;
+    border-left: 5px solid white;
+    border-bottom-left-radius: 25px 25px;
+    border-bottom-right-radius: 25px 25px;
+    border-top-right-radius: 0;
+    margin: 0 5% 5% 5%
+  }
+
+  .item{
+      text-align: center;
+  }
+  iframe{
+
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        
+  }
+
+  .flexContenedor{
+      flex-direction: column;
+  }
+
+
+  div a:active {
+    background-color: rgb(216, 49, 49);
+    opacity: 0.4;
+  }
+
+  form{
+    display: grid;
+    grid-template-areas:
+      "nombre" 
+      "apellido" 
+      "dni" 
+      "edad"
+      "email" 
+      "experiencia"
+      "botones"
+      ;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 1fr;
+    height: 100%;
+    row-gap: 3vw;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Asignacion de areas */
+#dq1i {
+  grid-area: dq1i;
+}
+#dq1S {
+  grid-area: dq1S;
+}
+#dq1T {
+  grid-area: dq1T;
+}
+#dq2i {
+  grid-area: dq2i;
+}
+#dq2S {
+  grid-area: dq2S;
+}
+#dq2T {
+  grid-area: dq2T;
+}
+#dq3i {
+  grid-area: dq3i;
+}
+#dq3S {
+  grid-area: dq3S;
+}
+#dq3T {
+  grid-area: dq3T;
+}
+#dq4i {
+  grid-area: dq4i;
+}
+#dq4S {
+  grid-area: dq4S;
+}
+#dq4T {
+  grid-area: dq4T;
+}
+#dq5i {
+  grid-area: dq5i;
+}
+#dq5S {
+  grid-area: dq5S;
+}
+#dq5T {
+  grid-area: dq5T;
+}
+#dq6i {
+  grid-area: dq6i;
+}
+#dq6S {
+  grid-area: dq6S;
+}
+#dq6T {
+  grid-area: dq6T;
+}
+#dq7i {
+  grid-area: dq7i;
+}
+#dq7S {
+  grid-area: dq7S;
+}
+#dq7T {
+  grid-area: dq7T;
+}
+#dq8i {
+  grid-area: dq8i;
+}
+#dq8S {
+  grid-area: dq8S;
+}
+#dq8T {
+  grid-area: dq8T;
+}
+#dq9i {
+  grid-area: dq9i;
+}
+#dq9S {
+  grid-area: dq9S;
+}
+#dq9T {
+  grid-area: dq9T;
+}
+#dq10i {
+  grid-area: dq10i;
+}
+#dq10S {
+  grid-area: dq10S;
+}
+#dq10T {
+  grid-area: dq10T;
+}
+#dq11i {
+  grid-area: dq11i;
+}
+#dq11S {
+  grid-area: dq11S;
+}
+#dq11T {
+  grid-area: dq11T;
+}
+
+#Intro{
+    grid-area: Intro;
+}
+
+#Form{
+    grid-area: Form;
+}
+
+#nombre{
+    grid-area: nombre;
+}
+
+#apellido{
+    grid-area: apellido;
+}
+
+#edad{
+    grid-area:edad;
+}
+
+#dni{
+    grid-area: dni;
+}
+
+#email{
+    grid-area: email;
+}
+
+#experiencia{
+    grid-area: experiencia;
+}
+
+#botones{
+    grid-area: botones;
+}
